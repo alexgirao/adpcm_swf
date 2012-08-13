@@ -1,0 +1,14 @@
+
+adpcm_swf
+https://github.com/alexgirao/adpcm_swf
+
+decoding of ADPCM (Adaptive Differential Pulse Code Modulation)
+according to SWF File Format Specification Version 10
+
+usage
+
+  swfextract -s 0048 -o sound.adpcm file.swf
+  adpcm_swf2raw -i sound.adpcm -o sound.raw
+  play --rate 22050 --channels 1 --bits 16 --encoding signed-integer --endian little --type raw sound.raw
+  sox --rate 22050 --channels 1 --bits 16 --encoding signed-integer --endian little --type raw sound.raw sound.wav
+
