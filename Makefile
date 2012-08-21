@@ -7,7 +7,7 @@ all: $(C_PROGS)
 	gcc -g -Wall -c -o $@ $<
 
 $(C_PROGS):
-	gcc -Wall -o $@ $^ -lrt
+	gcc -Wall -o $@ $^
 
 clean:
 	file * | grep ' ELF.* \(executable\|relocatable\),' | cut -d: -f1 | xargs rm -fv
